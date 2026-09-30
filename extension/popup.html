@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Urdu RTL Fixer</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/icon32.png" alt="" width="24" height="24">
+    <div>
+      <h1>Urdu RTL Fixer</h1>
+      <div class="sub" lang="ur" dir="rtl">اردو + انگریزی متن کی ترتیب درست کریں</div>
+    </div>
+  </header>
+
+  <section class="toggles">
+    <label class="row"><span>Enabled everywhere</span><input type="checkbox" id="optEnabled" class="switch"></label>
+    <label class="row"><span>Enabled on <b id="siteName">this site</b></span><input type="checkbox" id="optSite" class="switch"></label>
+    <label class="row"><span>Nastaliq font (Noto, offline) + line-height 2</span><input type="checkbox" id="optNastaliq" class="switch"></label>
+    <label class="row"><span>Wrap English/number runs (&lt;bdi&gt;)</span><input type="checkbox" id="optWrap" class="switch"></label>
+    <div class="status" id="pageStatus"></div>
+  </section>
+
+  <section class="fixer">
+    <label for="input" class="lbl">Paste or type mixed Urdu/English text:</label>
+    <textarea id="input" dir="auto" rows="5" placeholder="نیوٹن کا دوسرا قانون Newton's Second Law: F = ma ہے۔"></textarea>
+    <div class="lbl">Live preview (dir=rtl):</div>
+    <div id="preview" dir="rtl" lang="ur"></div>
+    <div class="actions">
+      <button id="fixCopy" class="primary">Fix &amp; Copy</button>
+      <button id="clear">Clear</button>
+      <span id="msg" role="status"></span>
+    </div>
+    <div class="hint">Adds invisible RLM (U+200F) at the start of each Urdu line and FSI…PDI (U+2068…U+2069) around every English/number/formula run. Paste into WhatsApp, Word, Notes, email.</div>
+  </section>
+  <script src="bidi.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

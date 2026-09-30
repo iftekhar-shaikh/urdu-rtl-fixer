@@ -1,0 +1,16 @@
+/* Injected by the manifest (exempt from page CSP). Nothing here applies unless our attributes are present. */
+@font-face {
+  font-family: "URF Noto Nastaliq Urdu";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/NotoNastaliqUrdu-Regular.ttf") format("truetype");
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F, U+2066-2069, U+25CC;
+}
+bdi[data-urf-run] { unicode-bidi: isolate; }
+bdi[data-urf-run="f"] { white-space: nowrap; }
+html.urf-nq [data-urf-nq] {
+  font-family: "URF Noto Nastaliq Urdu", system-ui, "Segoe UI", Roboto, Arial, sans-serif !important;
+  line-height: 2 !important;
+}
+html.urf-nq [data-urf-nq] bdi[data-urf-run] {
+  font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}

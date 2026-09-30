@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+
+# generated test output
+extension/screenshots/
+mcp-server/previews/
+
+# python
+__pycache__/
+*.pyc
+.venv*/
+
+# packaging
+*.zip
+*.crx
+*.pem
+
+# secrets / local config
+.env
+.env.*
+*.key
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
