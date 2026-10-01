@@ -10,6 +10,7 @@ This repo contains two tools that share one small bidi engine:
 | [`mcp-server/`](mcp-server/) | A local MCP server (stdio) so AI assistants can fix plain text and HTML, check it, and render a preview. |
 | [`docs/RTL-MIXED-TEXT-RECIPE.md`](docs/RTL-MIXED-TEXT-RECIPE.md) | The recipe both tools follow, for anyone who wants to fix mixed RTL text by hand. |
 | [`screenshots/`](screenshots/) | Before/after images. |
+| [`PRIVACY.md`](PRIVACY.md) | Privacy policy for the extension (it collects no data). |
 
 ## The problem
 
@@ -54,7 +55,7 @@ What it does:
 * **Popup:** on/off everywhere or per site, an optional bundled **Noto Nastaliq Urdu** font (works offline), and a **Fix & Copy** box for text you want to paste into WhatsApp, Word, Notes or email.
 * **Right-click:** select text → **Copy fixed for WhatsApp/Word**.
 
-The extension makes no network requests. Details: [`extension/README.md`](extension/README.md), Roman Urdu install guide: [`extension/INSTALL.md`](extension/INSTALL.md).
+The extension collects no data and makes no network requests ([privacy policy](PRIVACY.md)). Details: [`extension/README.md`](extension/README.md), Roman Urdu install guide: [`extension/INSTALL.md`](extension/INSTALL.md).
 
 Tests: `cd extension && node --test test/` (unit tests). An optional end-to-end test with headless Chrome is `python3 test/e2e_test.py` (needs `pip install playwright pillow` and Google Chrome).
 
